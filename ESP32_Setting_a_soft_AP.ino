@@ -307,7 +307,6 @@ void setup() {
     request->send(200, "text/plain", "Hello World");
   });
  
-  server.begin();
   // put your setup code here, to run once:
 
 }
