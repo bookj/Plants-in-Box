@@ -302,10 +302,6 @@ void setup() {
       //
     }
   });
-
-  server.on("/hello", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(200, "text/plain", "Hello World");
-  });
  
   // put your setup code here, to run once:
 
