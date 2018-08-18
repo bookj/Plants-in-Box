@@ -223,27 +223,6 @@ void setup() {
     }
   });
 
-  // Send a GET request to <IP>/get?message=<message>
-  server.on("/get", HTTP_GET, [](AsyncWebServerRequest *request){
-    String buff_devAddr;
-    String buff_nwkSKey;
-    String buff_appSKey;
-
-    if(request->hasParam("devAddr") || request->hasParam("nwkSKey") || request->hasParam("appSKey")){
-      buff_devAddr = request->getParam("devAddr")->value();
-      buff_nwkSKey = request->getParam("nwkSKey")->value();
-      buff_appSKey = request->getParam("appSKey")->value();
-    }
-    else {
-      
-    }
-    request->send(200, "text/plain", 
-      "Device Address : " + buff_devAddr + "\n" +
-      "Network Session Key : " + buff_nwkSKey + "\n" +
-      "App Session Key : " + buff_appSKey + "\n"
-    );
-  });
-
   // Send a POST request to <IP>/post with a form field message set to <message>
   server.on("/post", HTTP_POST, [](AsyncWebServerRequest *request){
     String buff_devAddr;
