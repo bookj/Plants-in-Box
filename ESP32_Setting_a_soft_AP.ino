@@ -333,6 +333,7 @@ void loop() {
   lastButtonState = reading;
 
   os_runloop_once();
+  
   // put your main code here, to run repeatedly:
 
 }
